@@ -1,0 +1,418 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Практическая книга по спортивной реабилитации баскетболистов. Кейсы, диагностика, выбор методики и контроль прогресса — от боли до возвращения на площадку." />
+  <title>Возвращение в игру — Практическая книга по спортивной реабилитации баскетболистов</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Перейти к содержимому</a>
+
+  <header class="header" id="top">
+    <div class="container header__inner">
+      <a class="logo" href="#top" aria-label="На главную">
+        <span class="logo__mark">🏀</span>
+        <span class="logo__text">RehabPlaybook</span>
+      </a>
+
+      <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="site-nav">
+        <span class="burger__lines" aria-hidden="true"></span>
+      </button>
+
+      <nav class="nav" id="site-nav" aria-label="Основная навигация">
+        <ul class="nav__list">
+          <li><a class="nav__link" href="#about">О книге</a></li>
+          <li><a class="nav__link" href="#features">Что внутри</a></li>
+          <li><a class="nav__link" href="#cases">Кейсы</a></li>
+          <li><a class="nav__link" href="#gallery">Галерея</a></li>
+          <li><a class="nav__link" href="#contacts">Контакты</a></li>
+        </ul>
+        <button class="nav__cta btn btn--primary" type="button" data-open-modal>
+          Оставить заявку
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="badge">Книга • спортивная реабилитация • баскетбол</p>
+          <h1 class="hero__title">Возвращение в игру</h1>
+          <p class="hero__subtitle">Практическая книга по спортивной реабилитации баскетболистов</p>
+
+          <ul class="hero__bullets">
+            <li>Диагностика: как отличать «перегрузку» от травмы</li>
+            <li>Протоколы по этапам: боль → восстановление → подготовка → площадка</li>
+            <li>Реальные сценарии под возраст, антропометрию и цели спортсмена</li>
+          </ul>
+
+          <div class="hero__actions">
+            <a class="btn btn--primary" href="#cases">Посмотреть кейсы</a>
+            <button class="btn btn--ghost" type="button" data-open-modal>Получить фрагмент</button>
+          </div>
+
+          <p class="hero__note">
+            <strong>Важно:</strong> сайт — учебный проект. Информация носит ознакомительный характер и не заменяет консультацию врача.
+          </p>
+        </div>
+
+        <div class="hero__media">
+          <img class="hero__image" src="assets/img/01-8.jpg" alt="Процедура физиотерапии на колене спортсмена" loading="eager" />
+          <div class="hero__card">
+            <p class="hero__card-title">Для кого книга</p>
+            <p class="hero__card-text">Спортсмены, тренеры, физиотерапевты и все, кто хочет понимать логику реабилитации после баскетбольных травм.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">О книге</h2>
+          <p class="section__desc">
+            «Возвращение в игру» — это практическое руководство о том, как восстановить спортсмена и вернуть его в игру без “магии” и хаоса.
+            В основе — принципы контроля боли, оценки риска, постепенного увеличения нагрузки и проверки результата.
+          </p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="card">
+            <h3 class="card__title">Главная идея</h3>
+            <p class="card__text">Не существует “одного упражнения для всех”. Методика подбирается по причине боли, этапу восстановления и контексту: позиция в баскетболе, объём игр, история травм.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Структура</h3>
+            <p class="card__text">От диагностики и выбора стратегии → к плану на 2–6 недель → критериям перехода между этапами → тестам готовности к возвращению на площадку.</p>
+          </article>
+          <article class="card">
+            <h3 class="card__title">Автор</h3>
+            <p class="card__text">Профессиональный баскетболист с опытом 30 лет игры. Собрал практику восстановления из спорта, физиотерапии и работы с врачами на разных этапах карьеры.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="features">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Что внутри</h2>
+          <p class="section__desc">6 ключевых блоков, которые помогают не “лечить симптом”, а управлять восстановлением.</p>
+        </div>
+
+        <div class="grid grid--3">
+          <article class="feature">
+            <h3 class="feature__title">Диагностика по шагам</h3>
+            <p class="feature__text">Скрининг, тесты, красные флаги, когда нужно УЗИ/МРТ и как читать результаты без паники.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Выбор методики</h3>
+            <p class="feature__text">Как решать: упражнения, мобилизация, физиотерапия, тейпирование, инъекции — и в каком сочетании это уместно.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">План нагрузки</h3>
+            <p class="feature__text">Объём, интенсивность, частота. Как не “пережечь” восстановление после перерыва и как держать форму.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Критерии прогресса</h3>
+            <p class="feature__text">Что измерять каждую неделю: боль, функция, сила, прыжковые тесты, утомляемость, качество движения.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Когда менять курс</h3>
+            <p class="feature__text">Признаки, что план не работает: плато, рост симптомов, “короткий эффект”, и как пересобрать стратегию.</p>
+          </article>
+          <article class="feature">
+            <h3 class="feature__title">Возврат в игру</h3>
+            <p class="feature__text">Переход от зала к площадке: ускорения, торможения, смена направления, контакт — и требования к готовности.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Реальные кейсы</h2>
+          <p class="section__desc">
+            Примеры “как думать”: разные травмы, разные спортсмены, разные решения. Переключай вкладки, чтобы посмотреть логику.
+          </p>
+        </div>
+
+        <div class="tabs" data-tabs>
+          <div class="tabs__controls" role="tablist" aria-label="Кейсы по зонам">
+            <button class="tabs__btn is-active" type="button" role="tab" aria-selected="true" aria-controls="tab-shoulder" id="tab-btn-shoulder" data-tab="shoulder">Плечо</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="tab-knee" id="tab-btn-knee" data-tab="knee">Колено</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="tab-load" id="tab-btn-load" data-tab="load">Перегрузка</button>
+            <button class="tabs__btn" type="button" role="tab" aria-selected="false" aria-controls="tab-return" id="tab-btn-return" data-tab="return">Возврат</button>
+          </div>
+
+          <div class="tabs__panels">
+            <div class="tabs__panel is-active" role="tabpanel" id="tab-shoulder" aria-labelledby="tab-btn-shoulder" data-panel="shoulder">
+              <div class="case-grid">
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/07-impidgment_syndrome_plecha.png" alt="Схема импиджмент-синдрома плеча" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 1: импиджмент у разыгрывающего</h3>
+                    <p class="case__meta">Возраст: 22 • Рост/вес: 186/80 • Жалоба: боль при броске и подъёме руки</p>
+                    <ul class="case__list">
+                      <li>Диагностика: “painful arc”, тесты ротаторов, оценка лопатки</li>
+                      <li>Старт: снижение объёма бросков + упражнения на контроль лопатки</li>
+                      <li>Критерий прогресса: боль &lt; 2/10 при бытовых движениях</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/02-89.jpg" alt="Схема плечевого сустава и сухожилий" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 2: сухожильная боль у ветерана</h3>
+                    <p class="case__meta">Возраст: 38 • Рост/вес: 190/92 • Жалоба: “ноет” после матчей</p>
+                    <ul class="case__list">
+                      <li>Фокус: силовая для ротаторов + дозирование нагрузки</li>
+                      <li>Когда пересмотреть: если боль растёт 2–3 недели подряд</li>
+                      <li>Тест готовности: серия бросков без ухудшения на следующий день</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="tab-knee" aria-labelledby="tab-btn-knee" data-panel="knee">
+              <div class="case-grid">
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/08-screenshot_2023_04_2.png" alt="Схема: норма и хондромаляция коленного сустава" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 3: боль под надколенником</h3>
+                    <p class="case__meta">Возраст: 17 • Рост/вес: 178/70 • Жалоба: боль при лестнице и приседе</p>
+                    <ul class="case__list">
+                      <li>Гипотеза: пателлофеморальный болевой синдром / хондромаляция</li>
+                      <li>Старт: контроль объёма прыжков + квадрицепс/ягодицы</li>
+                      <li>Критерий прогресса: присед до 90° без боли &gt; 3/10</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/10-image.jpg" alt="Схема анатомии коленного сустава" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 4: подозрение на мениск</h3>
+                    <p class="case__meta">Возраст: 29 • Рост/вес: 183/86 • Жалоба: щелчки и блок при повороте</p>
+                    <ul class="case__list">
+                      <li>Диагностика: тесты, анамнез, и решение — нужен ли снимок</li>
+                      <li>Старт: уменьшить повороты/контакт + восстановить ROM</li>
+                      <li>Точка решения: если “блок” сохраняется → врач/МРТ</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="tab-load" aria-labelledby="tab-btn-load" data-panel="load">
+              <div class="case-grid">
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/06-foj5i8q2a7kiq9miy7r3xz1cv7zsh6i3.jpg" alt="Инъекционная процедура в область колена" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 5: “всё лечили, но возвращается”</h3>
+                    <p class="case__meta">Возраст: 25 • Жалоба: боль ушла на 2 недели и вернулась после 2 игр</p>
+                    <ul class="case__list">
+                      <li>Ошибка: лечили только симптом, не меняли нагрузку</li>
+                      <li>Решение: дневник нагрузки + тесты утомления + силовая база</li>
+                      <li>Интервенции: процедуры — только как часть плана, а не вместо него</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/11-uvt-kolennogo-sustava.jpg" alt="Ударно-волновая терапия колена" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 6: тендинопатия и “прыжковая нога”</h3>
+                    <p class="case__meta">Возраст: 31 • Рост/вес: 188/90 • Жалоба: боль после прыжков</p>
+                    <ul class="case__list">
+                      <li>Старт: изометрия → эксцентрика → силовые</li>
+                      <li>Контроль: боль допустима, но не должна расти “на следующий день”</li>
+                      <li>Когда менять: если нет прогресса за 3–4 недели → пересмотр причины</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="tab-return" aria-labelledby="tab-btn-return" data-panel="return">
+              <div class="case-grid">
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/04-de0fe4669b191f8c94a9302ec1ab5c67.jpg" alt="Анатомия коленного сустава (схема)" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 7: тесты готовности к площадке</h3>
+                    <p class="case__meta">Пример набора тестов под баскетбол: прыжки, торможение, смена направления</p>
+                    <ul class="case__list">
+                      <li>Сила: симметрия по базовым движениям</li>
+                      <li>Плиометрика: 3–5 подходов без ухудшения симптомов</li>
+                      <li>Специфика: спринт/стоп/кат, затем лёгкий контакт</li>
+                    </ul>
+                  </div>
+                </article>
+
+                <article class="case">
+                  <div class="case__media">
+                    <img src="assets/img/03-245.jpg" alt="Диапазон движения и болевая дуга в плечевом суставе" loading="lazy" />
+                  </div>
+                  <div class="case__body">
+                    <h3 class="case__title">Кейс 8: “возврат без отката”</h3>
+                    <p class="case__meta">Как планировать 2 недели после возвращения: объём, сон, восстановление, контроль боли</p>
+                    <ul class="case__list">
+                      <li>Первые 3 тренировки — технические, без максимума</li>
+                      <li>На 7–10 день — контрольный тест, корректировка плана</li>
+                      <li>Если болевой фон растёт → шаг назад и диагностика причины</li>
+                    </ul>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <p class="callout__title">Хочешь “чек-лист” по диагностике и переходам между этапами?</p>
+          <p class="callout__text">Оставь заявку — пришлю учебный PDF-фрагмент (демо).</p>
+          <button class="btn btn--primary" type="button" data-open-modal>Оставить заявку</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--muted" id="gallery">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Галерея</h2>
+          <p class="section__desc">Слайдер на чистом JavaScript: изображения подгружаются из массива и переключаются кнопками/точками.</p>
+        </div>
+
+        <div class="slider" data-slider>
+          <div class="slider__viewport">
+            <img class="slider__image" src="assets/img/01-8.jpg" alt="Галерея: пример изображения" loading="lazy" />
+          </div>
+
+          <div class="slider__controls">
+            <button class="btn btn--ghost" type="button" data-prev aria-label="Предыдущее фото">←</button>
+            <div class="slider__dots" data-dots aria-label="Переключение слайдов"></div>
+            <button class="btn btn--ghost" type="button" data-next aria-label="Следующее фото">→</button>
+          </div>
+
+          <p class="slider__caption" data-caption>Подпись к изображению</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacts">
+      <div class="container contact">
+        <div class="contact__info">
+          <h2 class="section__title">Контакты (Москва)</h2>
+          <p class="section__desc">Учебный лендинг. Контакты вымышленные — в формате, как обычно делают на сайте.</p>
+
+          <ul class="contact__list">
+            <li><strong>Адрес:</strong> Москва, ул. Спортивная, 12 (рядом с м. “Спортивная”)</li>
+            <li><strong>Телефон:</strong> +7 (495) 123-45-67</li>
+            <li><strong>Email:</strong> rehabplaybook.msk@example.com</li>
+            <li><strong>Время:</strong> Пн–Сб 10:00–20:00</li>
+          </ul>
+
+          <div class="contact__actions">
+            <button class="btn btn--primary" type="button" data-open-modal>Оставить заявку</button>
+            <a class="btn btn--ghost" href="#top">Наверх</a>
+          </div>
+        </div>
+
+        <aside class="contact__card">
+          <h3 class="contact__card-title">Что придёт на почту</h3>
+          <ul class="checklist">
+            <li>Содержание книги (демо)</li>
+            <li>Шаблон дневника нагрузки</li>
+            <li>Критерии перехода между этапами</li>
+          </ul>
+          <p class="contact__small">Нажимая “Отправить”, вы соглашаетесь на обработку данных в рамках учебного проекта.</p>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p>© 2025 RehabPlaybook. Учебная практика. Сделано на чистом HTML/CSS/JS.</p>
+      <p class="footer__links">
+        <a href="#top">Вверх</a>
+        <span aria-hidden="true">•</span>
+        <a href="#contacts">Контакты</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- Modal -->
+  <div class="modal" data-modal aria-hidden="true">
+    <div class="modal__overlay" data-close-modal tabindex="-1"></div>
+    <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button class="modal__close" type="button" data-close-modal aria-label="Закрыть окно">×</button>
+      <h2 class="modal__title" id="modal-title">Оставить заявку</h2>
+      <p class="modal__desc">Заполни форму — и мы отправим демо-фрагмент и чек-листы (учебная имитация).</p>
+
+      <form class="form" id="lead-form" novalidate>
+        <label class="field">
+          <span class="field__label">Имя</span>
+          <input class="field__input" name="name" type="text" autocomplete="name" required minlength="2" placeholder="Алекс" />
+          <span class="field__error" data-error-for="name"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Телефон</span>
+          <input class="field__input" name="phone" type="tel" autocomplete="tel" required placeholder="+7 (___) ___-__-__" />
+          <span class="field__error" data-error-for="phone"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Email</span>
+          <input class="field__input" name="email" type="email" autocomplete="email" required placeholder="name@example.com" />
+          <span class="field__error" data-error-for="email"></span>
+        </label>
+
+        <label class="field">
+          <span class="field__label">Комментарий (необязательно)</span>
+          <textarea class="field__input field__input--area" name="message" rows="3" placeholder="Какая травма интересует больше всего?"></textarea>
+        </label>
+
+        <button class="btn btn--primary btn--block" type="submit">Отправить</button>
+        <p class="form__hint">Данные сохраняются локально в браузере (localStorage) для демонстрации.</p>
+      </form>
+
+      <div class="form-success" data-form-success hidden>
+        <h3 class="form-success__title">Заявка отправлена ✅</h3>
+        <p class="form-success__text">В учебной версии письмо не уходит на почту — но данные сохранены локально. Спасибо!</p>
+        <button class="btn btn--ghost" type="button" data-close-modal>Закрыть</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
