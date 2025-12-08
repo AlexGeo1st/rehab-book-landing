@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="./css/style.css" />
 </head>
 <body>
+  <canvas id="bgCanvas" aria-hidden="true"></canvas>
   <a class="skip" href="#main">Перейти к содержимому</a>
 
   <header class="header" id="top">
@@ -62,10 +63,16 @@
             <a class="btn btn--ghost" href="#cases">Посмотреть кейсы</a>
           </div>
 
+          <div class="proof">
+            <div class="proof__item"><span class="proof__kpi">≤14 дней</span><span class="proof__txt">до первого пересмотра плана при плато</span></div>
+            <div class="proof__item"><span class="proof__kpi">4 этапа</span><span class="proof__txt">возврата к прыжкам и смене направления</span></div>
+            <div class="proof__item"><span class="proof__kpi">чек-листы</span><span class="proof__txt">тесты, ROM, шкала боли, отёк</span></div>
+          </div>
+
           <ul class="trust">
-            <li>✅ чёткие критерии прогресса</li>
-            <li>✅ диагностика без “лишнего”</li>
-            <li>✅ пошаговый возврат к нагрузке</li>
+            <li>✅ критерии прогресса и стоп-сигналы</li>
+            <li>✅ практические кейсы «как было / что сделали / что получилось»</li>
+            <li>✅ понятные шаги, без “магии”</li>
           </ul>
         </div>
 
@@ -86,6 +93,12 @@
             <img src="./assets/img/subacromial_pain_arc.jpg" alt="Схема болевой дуги при субакромиальной боли" loading="lazy">
             <img src="./assets/img/chondromalacia_patella.png" alt="Схема хондромаляции надколенника" loading="lazy">
             <img src="./assets/img/shoulder_impingement.png" alt="Схема импиджмент-синдрома плеча" loading="lazy">
+          </div>
+
+          <div class="hero__stamp" aria-label="Гарантия (учебная)">
+            <div class="hero__stampTop">Проверенная логика</div>
+            <div class="hero__stampMid">безопасный<br>возврат</div>
+            <div class="hero__stampBot">учебный проект</div>
           </div>
         </div>
       </div>
