@@ -205,3 +205,5 @@ input:focus,textarea:focus{border-color:rgba(47,111,237,.65)}
   .masonry{grid-template-columns:1fr}
   .bookmock__img{height:190px}
 }
+
+.video{width:100%;aspect-ratio:16/9;height:auto;display:block;background:#000}
