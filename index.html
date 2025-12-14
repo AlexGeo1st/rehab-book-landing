@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>«Возвращение в игру» — спортивная реабилитация в баскетболе</title>
-  <meta name="description" content="Адаптивный лендинг-презентация книги о спортивной реабилитации спортсменов на примере баскетбола: диагностика, кейсы, методики, контроль прогресса." />
+  <meta name="description" content="Адаптивный лендинг-презентация книги о спортивной реабилитации спортсменов на примере баскетбола: диагностика, кейсы, методики, тейпирование, контроль прогресса." />
   <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -33,6 +33,7 @@
         <ul class="nav__list" id="navMenu">
           <li><a class="nav__link" href="#about">О книге</a></li>
           <li><a class="nav__link" href="#cases">Кейсы</a></li>
+          <li><a class="nav__link" href="#taping">Тейпирование</a></li>
           <li><a class="nav__link" href="#methods">Методики</a></li>
           <li><a class="nav__link" href="#gallery">Галерея</a></li>
           <li><a class="nav__link nav__link--cta" href="#request" data-open-modal>Оставить заявку</a></li>
@@ -45,7 +46,7 @@
     <section class="hero">
       <div class="container hero__grid">
         <div class="hero__content">
-          <p class="badge">Учебная практика • HTML/CSS/JS • Адаптив</p>
+          <p class="badge"><span class="ball" aria-hidden="true">🏀</span>Учебная практика • HTML/CSS/JS • Адаптив</p>
           <h1 class="hero__title">Система реабилитации, которая возвращает спортсменов <span class="grad">в игру</span></h1>
           <p class="hero__lead">
             Книга о спортивной реабилитации на примере баскетбола: как диагностировать проблему,
@@ -54,7 +55,7 @@
 
           <div class="hero__stats">
             <div class="stat"><div class="stat__num">30+</div><div class="stat__label">лет в проф. баскетболе</div></div>
-            <div class="stat"><div class="stat__num">12</div><div class="stat__label">глав + чек-листы</div></div>
+            <div class="stat"><div class="stat__num">12</div><div class="stat__label">глав + чек‑листы</div></div>
             <div class="stat"><div class="stat__num">20+</div><div class="stat__label">кейсов травм</div></div>
           </div>
 
@@ -66,11 +67,11 @@
           <div class="proof">
             <div class="proof__item"><span class="proof__kpi">≤14 дней</span><span class="proof__txt">до первого пересмотра плана при плато</span></div>
             <div class="proof__item"><span class="proof__kpi">4 этапа</span><span class="proof__txt">возврата к прыжкам и смене направления</span></div>
-            <div class="proof__item"><span class="proof__kpi">чек-листы</span><span class="proof__txt">тесты, ROM, шкала боли, отёк</span></div>
+            <div class="proof__item"><span class="proof__kpi">чек‑листы</span><span class="proof__txt">тесты, ROM, шкала боли, отёк</span></div>
           </div>
 
           <ul class="trust">
-            <li>✅ критерии прогресса и стоп-сигналы</li>
+            <li>✅ критерии прогресса и стоп‑сигналы</li>
             <li>✅ практические кейсы «как было / что сделали / что получилось»</li>
             <li>✅ понятные шаги, без “магии”</li>
           </ul>
@@ -78,29 +79,53 @@
 
         <div class="hero__visual">
           <div class="book">
-            <div class="book__cover">
-              <div class="book__top">Возвращение в игру</div>
-              <div class="book__mid">Спортивная<br>реабилитация</div>
-              <div class="book__bot">на примере баскетбола</div>
-              <div class="book__meta">
-                <span>Диагностика</span><span>Кейсы</span><span>Методики</span><span>Возврат</span>
+            <div class="book__wrap">
+              <div class="bookmock" aria-label="Обложка книги">
+                <div class="bookmock__top">
+                  <div class="bookmock__title">Возвращение в игру</div>
+                  <div class="bookmock__subtitle">Спортивная реабилитация на примере баскетбола</div>
+                </div>
+                <img class="bookmock__img" src="./assets/img/kobe_injury_court.jpg" alt="Фотография баскетболиста с травмой на площадке" loading="lazy">
+                <div class="bookmock__bottom">
+                  <span class="pill">Диагностика</span>
+                  <span class="pill">Тейпирование</span>
+                  <span class="pill">Кейсы</span>
+                  <span class="pill">Возврат</span>
+                </div>
+              </div>
+
+              <div class="hero__peek" aria-label="Иллюстрации из книги">
+                <img src="./assets/img/subacromial_pain_arc.jpg" alt="Схема болевой дуги при субакромиальной боли" loading="lazy">
+                <img src="./assets/img/chondromalacia_patella.png" alt="Схема хондромаляции надколенника" loading="lazy">
+                <img src="./assets/img/shoulder_impingement.png" alt="Схема импиджмент-синдрома плеча" loading="lazy">
               </div>
             </div>
             <div class="book__shadow" aria-hidden="true"></div>
           </div>
 
-          <div class="hero__peek" aria-label="Иллюстрации из книги">
-            <img src="./assets/img/subacromial_pain_arc.jpg" alt="Схема болевой дуги при субакромиальной боли" loading="lazy">
-            <img src="./assets/img/chondromalacia_patella.png" alt="Схема хондромаляции надколенника" loading="lazy">
-            <img src="./assets/img/shoulder_impingement.png" alt="Схема импиджмент-синдрома плеча" loading="lazy">
-          </div>
-
           <div class="hero__stamp" aria-label="Гарантия (учебная)">
-            <div class="hero__stampTop">Проверенная логика</div>
-            <div class="hero__stampMid">безопасный<br>возврат</div>
+            <div class="hero__stampTop">Практично</div>
+            <div class="hero__stampMid">травма → план →<br>возврат</div>
             <div class="hero__stampBot">учебный проект</div>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="injuries">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Баскетбол — контакт, скорость и риск</h2>
+          <p class="section__subtitle">В книге показано, как переводить игровой эпизод в понятный план восстановления: от первичной оценки до возврата на площадку.</p>
+        </div>
+        <div class="masonry">
+          <img src="./assets/img/player_injury_warriors.jpg" alt="Игровой эпизод с травмой" loading="lazy">
+          <div class="masonry__stack">
+            <img src="./assets/img/player_injury_lakers.jpg" alt="Травма на площадке" loading="lazy">
+            <img src="./assets/img/kobe_injury_court.jpg" alt="Спортсмен с травмой" loading="lazy">
+          </div>
+        </div>
+        <p class="masonry__note">Акцент: не «лечить симптом», а управлять нагрузкой, диагностикой и этапностью. Это снижает риск повторного повреждения.</p>
       </div>
     </section>
 
@@ -118,10 +143,10 @@
         </div>
 
         <div class="callout">
-          <div class="callout__icon" aria-hidden="true">📍</div>
+          <div class="callout__icon" aria-hidden="true">🏀</div>
           <div class="callout__text">
             <strong>Автор:</strong> профессиональный баскетболист (30 лет опыта игры) — собрал методики и кейсы восстановления из спортивной практики.
-            <span class="muted">Москва • индивидуальный подход • понятные чек-листы</span>
+            <span class="muted">Москва • индивидуальный подход • понятные чек‑листы</span>
           </div>
           <a class="btn btn--primary btn--small" href="#request" data-open-modal>Задать вопрос</a>
         </div>
@@ -208,7 +233,7 @@
                     <li>Добавляем специфические нагрузки (прыжки, смена направления).</li>
                     <li>Контроль: тесты, шкала боли, восстановление.</li>
                   </ol>
-                  <p class="muted">В книге — чек-листы и критерии перехода между этапами.</p>
+                  <p class="muted">В книге — чек‑листы и критерии перехода между этапами.</p>
                 </div>
                 <figure class="media">
                   <img src="./assets/img/knee_anatomy_full.jpg" alt="Схема анатомии колена" loading="lazy">
@@ -221,11 +246,56 @@
       </div>
     </section>
 
+    <section class="section" id="taping">
+      <div class="container">
+        <div class="section__head">
+          <h2 class="section__title">Спортивное тейпирование</h2>
+          <p class="section__subtitle">Тейпирование — инструмент поддержки движения и контроля нагрузки. Ниже — нативное видео (MP4), которое можно смотреть прямо на сайте.</p>
+        </div>
+
+        <div class="featureGrid">
+          <div class="videoCard">
+            <div class="videoCard__top">
+              <strong>Видео: тейпирование как шаг реабилитации</strong>
+              <span>будет добавлено</span>
+            </div>
+            <div class="videoCard__body">
+              
+            <video class="video" controls preload="metadata" poster="./assets/img/taping_poster.jpg">
+              <source src="./assets/video/taping_cska.mp4" type="video/mp4">
+              Ваш браузер не поддерживает видео. Скачайте файл: <a href="./assets/video/taping_cska.mp4">MP4</a>
+            </video>
+            <div style="padding:14px 18px; border-top:1px solid rgba(255,255,255,.10); color: rgba(234,240,255,.86); line-height:1.6">
+              <strong>Нативный просмотр прямо на лендинге.</strong>
+              <span class="muted">Видео встроено через HTML5 &lt;video&gt; (без внешних зависимостей).</span>
+            </div>
+
+            </div>
+          </div>
+
+          <div class="tiplist">
+            <h3>Когда это уместно</h3>
+            <ul class="list">
+              <li><strong>На ранней стадии:</strong> чтобы уменьшить дискомфорт и «успокоить» движение.</li>
+              <li><strong>При возврате к нагрузке:</strong> как временная поддержка техники и уверенности.</li>
+              <li><strong>После тренировки:</strong> чтобы не провоцировать усиление боли при бытовой активности.</li>
+            </ul>
+
+            <div class="kpiRow">
+              <div class="kpi"><strong>Цель</strong><span>поддержать, а не заменить лечение</span></div>
+              <div class="kpi"><strong>Проверка</strong><span>эффект оценивается в движении</span></div>
+              <div class="kpi"><strong>Срок</strong><span>временный инструмент на этапе</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="section" id="methods">
       <div class="container">
         <div class="section__head">
           <h2 class="section__title">Методики (и как их выбирать)</h2>
-          <p class="section__subtitle">Не “одна процедура”, а набор инструментов под задачу и стадию восстановления.</p>
+          <p class="section__subtitle">Не «одна процедура», а набор инструментов под задачу и стадию восстановления.</p>
         </div>
 
         <div class="grid-3">
@@ -234,12 +304,12 @@
             <div class="card__body"><h3>УВТ / физиотерапия</h3><p>Когда уместно, как оценить эффект и когда менять тактику.</p></div>
           </article>
           <article class="card card--media">
-            <img src="./assets/img/gallery_electrotherapy_knee.jpg" alt="Электротерапия" loading="lazy">
+            <img src="./assets/img/gallery_electrotherapy_knee.jpg" alt="Электротерапия на колене" loading="lazy">
             <div class="card__body"><h3>Упражнения и нагрузка</h3><p>Сила, техника, стабильность и прогрессия — база восстановления.</p></div>
           </article>
           <article class="card card--media">
             <img src="./assets/img/knee_joint_injection.jpg" alt="Инъекционное лечение" loading="lazy">
-            <div class="card__body"><h3>Инъекции и “красные флаги”</h3><p>Когда нужна очная диагностика и почему решения принимает врач.</p></div>
+            <div class="card__body"><h3>Инъекции и «красные флаги»</h3><p>Когда нужна очная диагностика и почему решения принимает врач.</p></div>
           </article>
         </div>
 
@@ -251,7 +321,7 @@
             <span>— автор книги</span>
           </div>
           <div class="mini-cards">
-            <div class="mini"><strong>Формат</strong><span>электронная версия + чек-листы</span></div>
+            <div class="mini"><strong>Формат</strong><span>электронная версия + чек‑листы</span></div>
             <div class="mini"><strong>Кому</strong><span>спортсменам, тренерам, родителям</span></div>
             <div class="mini"><strong>Город</strong><span>Москва (консультации)</span></div>
           </div>
@@ -321,6 +391,7 @@
         <ul>
           <li><a href="#about">О книге</a></li>
           <li><a href="#cases">Кейсы</a></li>
+          <li><a href="#taping">Тейпирование</a></li>
           <li><a href="#methods">Методики</a></li>
           <li><a href="#gallery">Галерея</a></li>
         </ul>
@@ -328,7 +399,7 @@
     </div>
 
     <div class="container footer__bottom">
-      <small>© 2025. Учебный проект. Изображения — учебные иллюстрации/заглушки.</small>
+      <small>© 2025. Учебный проект. Материалы используются как учебные иллюстрации.</small>
       <a class="to-top" href="#top">Наверх ↑</a>
     </div>
   </footer>

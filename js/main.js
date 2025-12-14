@@ -33,20 +33,16 @@
     if(!canvas||!ctx) return;
     ctx.clearRect(0,0,W,H);
 
-    // soft gradient wash
     const g = ctx.createRadialGradient(W*0.15,H*0.1,0, W*0.15,H*0.1, Math.max(W,H)*0.9);
     g.addColorStop(0,'rgba(47,111,237,0.18)');
     g.addColorStop(1,'rgba(0,0,0,0)');
-    ctx.fillStyle = g;
-    ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = g; ctx.fillRect(0,0,W,H);
 
     const g2 = ctx.createRadialGradient(W*0.85,H*0.12,0, W*0.85,H*0.12, Math.max(W,H)*0.9);
     g2.addColorStop(0,'rgba(255,122,24,0.14)');
     g2.addColorStop(1,'rgba(0,0,0,0)');
-    ctx.fillStyle = g2;
-    ctx.fillRect(0,0,W,H);
+    ctx.fillStyle = g2; ctx.fillRect(0,0,W,H);
 
-    // update
     for(const p of particles){
       p.x += p.vx; p.y += p.vy;
       if(p.x< -20) p.x = W+20;
@@ -55,7 +51,6 @@
       if(p.y> H+20) p.y = -20;
     }
 
-    // lines
     for(let i=0;i<particles.length;i++){
       const a = particles[i];
       for(let j=i+1;j<particles.length;j++){
@@ -67,38 +62,27 @@
           const alpha = 0.10*(1 - d2/max);
           ctx.strokeStyle = `rgba(234,240,255,${alpha})`;
           ctx.lineWidth = 1;
-          ctx.beginPath();
-          ctx.moveTo(a.x,a.y);
-          ctx.lineTo(b.x,b.y);
-          ctx.stroke();
+          ctx.beginPath(); ctx.moveTo(a.x,a.y); ctx.lineTo(b.x,b.y); ctx.stroke();
         }
       }
     }
 
-    // particles
     for(const p of particles){
       ctx.fillStyle = 'rgba(234,240,255,0.72)';
-      ctx.beginPath();
-      ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
-      ctx.fill();
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2); ctx.fill();
     }
 
-    // mouse glow
     if(mouse.active){
       const mg = ctx.createRadialGradient(mouse.x,mouse.y,0, mouse.x,mouse.y, 220);
       mg.addColorStop(0,'rgba(47,111,237,0.18)');
       mg.addColorStop(0.55,'rgba(255,122,24,0.07)');
       mg.addColorStop(1,'rgba(0,0,0,0)');
-      ctx.fillStyle = mg;
-      ctx.fillRect(0,0,W,H);
+      ctx.fillStyle = mg; ctx.fillRect(0,0,W,H);
     }
   }
 
   let raf = 0;
-  function loop(){
-    draw();
-    raf = requestAnimationFrame(loop);
-  }
+  function loop(){ draw(); raf = requestAnimationFrame(loop); }
 
   function startBg(){
     if(!canvas||!ctx) return;
@@ -182,8 +166,11 @@
     });
   }
 
-  // -------- Slider --------
+  // -------- Slider (gallery) --------
   const slides = [
+    { src:'./assets/img/kobe_injury_court.jpg', alt:'Травма игрока на площадке', cap:'Реальные игровые эпизоды напоминают: риск травм всегда рядом.' },
+    { src:'./assets/img/player_injury_warriors.jpg', alt:'Травма в матче', cap:'Острая боль → первичная оценка → решение по нагрузке.' },
+    { src:'./assets/img/player_injury_lakers.jpg', alt:'Травма нижней конечности', cap:'Важно отличать перегрузку от повреждения и вовремя корректировать план.' },
     { src:'./assets/img/shockwave_therapy_knee.jpg', alt:'УВТ колена', cap:'УВТ: пример процедуры (иллюстрация).' },
     { src:'./assets/img/gallery_electrotherapy_knee.jpg', alt:'Электротерапия на колене', cap:'Физиотерапия: пример постановки электродов.' },
     { src:'./assets/img/knee_joint_injection.jpg', alt:'Инъекция в область колена', cap:'Инъекционные методы — по назначению врача (иллюстрация).' },
@@ -197,38 +184,39 @@
   ];
 
   const sliderRoot = document.querySelector('[data-slider]');
-  if (!sliderRoot) return;
-  const img = sliderRoot.querySelector('.slider__img');
-  const cap = sliderRoot.querySelector('.slider__cap');
-  const prev = sliderRoot.querySelector('[data-prev]');
-  const next = sliderRoot.querySelector('[data-next]');
-  const thumbs = document.querySelector('.thumbs');
+  if (sliderRoot) {
+    const img = sliderRoot.querySelector('.slider__img');
+    const cap = sliderRoot.querySelector('.slider__cap');
+    const prev = sliderRoot.querySelector('[data-prev]');
+    const next = sliderRoot.querySelector('[data-next]');
+    const thumbs = document.querySelector('.thumbs');
 
-  let idx = 0;
-  const render = () => {
-    const s = slides[idx];
-    img.src = s.src; img.alt = s.alt; cap.textContent = s.cap;
-    thumbs?.querySelectorAll('.thumb').forEach((t,i)=>t.classList.toggle('is-active', i===idx));
-  };
-  const go = (d) => { idx = (idx + d + slides.length) % slides.length; render(); };
-  prev?.addEventListener('click', ()=>go(-1));
-  next?.addEventListener('click', ()=>go(1));
+    let idx = 0;
+    const render = () => {
+      const s = slides[idx];
+      img.src = s.src; img.alt = s.alt; cap.textContent = s.cap;
+      thumbs?.querySelectorAll('.thumb').forEach((t,i)=>t.classList.toggle('is-active', i===idx));
+    };
+    const go = (d) => { idx = (idx + d + slides.length) % slides.length; render(); };
+    prev?.addEventListener('click', ()=>go(-1));
+    next?.addEventListener('click', ()=>go(1));
 
-  if (thumbs) {
-    thumbs.innerHTML = slides.slice(0,6).map((s,i)=>`
-      <button class="thumb ${i===0?'is-active':''}" type="button" aria-label="Слайд ${i+1}">
-        <img src="${s.src}" alt="${s.alt}">
-      </button>`).join('');
-    thumbs.querySelectorAll('.thumb').forEach((b,i)=>b.addEventListener('click', ()=>{ idx=i; render(); }));
+    if (thumbs) {
+      thumbs.innerHTML = slides.slice(0,6).map((s,i)=>`
+        <button class="thumb ${i===0?'is-active':''}" type="button" aria-label="Слайд ${i+1}">
+          <img src="${s.src}" alt="${s.alt}">
+        </button>`).join('');
+      thumbs.querySelectorAll('.thumb').forEach((b,i)=>b.addEventListener('click', ()=>{ idx=i; render(); }));
+    }
+
+    document.addEventListener('keydown', (e) => {
+      const r = sliderRoot.getBoundingClientRect();
+      const inView = r.top < window.innerHeight && r.bottom > 0;
+      if (!inView) return;
+      if (e.key === 'ArrowLeft') go(-1);
+      if (e.key === 'ArrowRight') go(1);
+    });
+
+    render();
   }
-
-  document.addEventListener('keydown', (e) => {
-    const r = sliderRoot.getBoundingClientRect();
-    const inView = r.top < window.innerHeight && r.bottom > 0;
-    if (!inView) return;
-    if (e.key === 'ArrowLeft') go(-1);
-    if (e.key === 'ArrowRight') go(1);
-  });
-
-  render();
 })();
